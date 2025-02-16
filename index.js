@@ -19,7 +19,7 @@ app.use(
 app.get('/',(req,res)=> {
     res.status(200).send('App is working  fine')
 })
-app.use("/solo", (res, req) => {
+app.use("/solo", (req,res) => {
     res.status(200).send("it working were well")
 })
 
