@@ -9,11 +9,14 @@ const app = express()
 
 app.use(cors())
 app.use(express.json())
-app.use(cors({
-  origin: "https://movie-app-p.netlify.app",
-  credentials: true,
-  
-}))
+app.use(
+  cors({
+    origin: "https://movie-app-p.netlify.app",
+    credentials: true,
+    methods: ["GET", "POST", "put", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+  })
+);
 app.options("*", cors());
 
 app.get('/',(req,res)=> {
