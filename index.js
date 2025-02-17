@@ -13,11 +13,9 @@ app.use(
   cors({
     origin: "https://movie-app-p.netlify.app",
     credentials: true,
-    
-    allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
-app.options("*", cors());
+
 
 app.get('/',(req,res)=> {
     res.status(200).send('App is working  fine')
