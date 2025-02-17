@@ -11,11 +11,13 @@ app.use(cors())
 app.use(express.json())
 app.use(
   cors({
-    origin: "https://movie-p-4.netlify.app/",
+    origin: "*",
     credentials: true,
   })
 );
 app.options('*',cors())
+
+ConnectDB()
 
 app.get('/',(req,res)=> {
     res.status(200).send('App is working  fine')
@@ -26,7 +28,6 @@ app.get("/solo", (req,res) => {
 
 app.use("/api/user",userRoutes)
 
-ConnectDB()
 
 app.listen(process.env.PORT, () => {
     console.log(`APP is listening in ${process.env.PORT}`)
