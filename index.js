@@ -13,7 +13,7 @@ app.use(
   cors({
     origin: "https://movie-app-p.netlify.app",
     credentials: true,
-    methods: ["GET", "POST", "put", "DELETE"],
+    
     allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
