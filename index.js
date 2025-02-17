@@ -11,7 +11,7 @@ app.use(cors())
 app.use(express.json())
 app.use(
   cors({
-    origin: "https://movie-pro-1.netlify.app/api/user",
+    origin: "https://movie-p-4.netlify.app/",
     credentials: true,
   })
 );
