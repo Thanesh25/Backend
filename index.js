@@ -9,22 +9,19 @@ const app = express()
 
 
 app.use(express.json())
-app.use(
-  cors({
-    origin: "*",
-    credentials: true,
-  })
-);
-app.options('*',cors())
+app.use(cors({
+  origin: "*",
+  credentials: true,
+  
+}))
+
 
 ConnectDB()
 
 app.get('/',(req,res)=> {
     res.status(200).send('App is working  fine')
 })
-app.get("/solo", (req,res) => {
-    res.status(200).send("it working were well")
-})
+
 
 app.use("/api/user",userRoutes)
 
