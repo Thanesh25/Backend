@@ -15,7 +15,7 @@ app.use(
     credentials: true,
   })
 );
-
+app.options('*',cors())
 
 app.get('/',(req,res)=> {
     res.status(200).send('App is working  fine')
